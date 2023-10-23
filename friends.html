@@ -9,6 +9,7 @@
 </head>
 
 <body>
+  <!-- components -->
   <div class="status-bar">
     <div class="status-bar__column">
       <span>No Service</span>
@@ -25,6 +26,7 @@
     </div>
   </div>
 
+  <!-- components -->
   <header class='screen-header'>
     <h1 class="screen-header__title">Friends</h1>
     <div class="screen-header__icons">
@@ -40,6 +42,51 @@
     </div>
   </header>
 
+  <a id='friends-display-link'>
+    <i class="fas fa-info-circle"></i>
+    Friend's Names Display
+    <i class="fas fa-chevron-right fa-xs"></i>
+
+  </a>
+
+  <main class='friends-screen'>
+    <!-- components -->
+    <div class="user-component">
+      <div class="user-component__column">
+        <img src="https://i.pinimg.com/564x/aa/53/07/aa53077332c7edee9197913a78ae8767.jpg"
+          class='user-component__avatar user-component__avatar--xl' />
+        <div class="user-component__text">
+          <h4 class="user-component__title">Nicolas</h4>
+          <!-- <h6 class="user-component__subtitle">this is a random text, wake up!</h6> -->
+        </div>
+      </div>
+      <div class="user-component__column"></div>
+    </div>
+
+    <div class="friends-screen__channel">
+      <div class="friends-screen__channel-header">
+        <span>Channel</span>
+        <i class="fas fa-chevron-up fa-xs"></i>
+      </div>
+      <div class="user-component">
+        <div class="user-component__column">
+          <img src="https://i.pinimg.com/564x/aa/53/07/aa53077332c7edee9197913a78ae8767.jpg"
+            class='user-component__avatar user-component__avatar--sm' />
+          <div class="user-component__text">
+            <h4 class="user-component__title user-component__title--not-bold">Channel</h4>
+
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span>2</span>
+          <i class="fas fa-chevron-right fa-xs"></i>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- components -->
   <nav class="nav">
     <ul class="nav__list">
       <li class="nav__btn">
