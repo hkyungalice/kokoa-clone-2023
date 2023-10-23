@@ -12,6 +12,9 @@
 
 .badge-sm {
   position: absolute;
+  top: 50px;
+  right: 18px;
+
   display: flex;
   justify-content: center;
   align-items: center;

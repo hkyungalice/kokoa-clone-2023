@@ -24,7 +24,6 @@
 }
 
 .nav__new {
-  position: absolute;
-  right: -8px;
-  top: -15px;
+  right: -8px !important;
+  top: -15px !important;
 }
