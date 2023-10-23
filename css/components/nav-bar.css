@@ -27,14 +27,4 @@
   position: absolute;
   right: -8px;
   top: -15px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 8px;
-  height: 8px;
-  color: #fff;
-  font-weight: 600;
-  border-radius: 4px;
-  background-color: tomato;
 }
