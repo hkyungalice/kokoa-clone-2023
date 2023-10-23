@@ -15,6 +15,23 @@
   align-items: flex-end;
   color: var(--gray-5);
 }
+.user-component__text div {
+  display: flex;
+  align-items: center;
+}
+.user-component__text div span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  margin-left: 5px;
+  color: tomato;
+  font-size: 12px;
+  border: 1px solid tomato;
+  border-radius: 50%;
+}
 
 .user-component__avatar {
   width: 70px;
