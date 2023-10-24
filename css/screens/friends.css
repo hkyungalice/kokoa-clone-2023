@@ -29,3 +29,34 @@
   margin-bottom: 30px;
   color: var(--gray-5);
 }
+
+/* splash */
+@keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+    /* 화면에서 보이지 않을 뿐, element는 남아있음 */
+  }
+}
+
+#splash-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 132px;
+  background-color: var(--yellow);
+
+  animation: hideSplashScreen 0.3s ease-in-out forwards;
+  /* forwards : animation은 실행 후 다시 원래 설정으로 돌아가는데 to { 설정 } 을 유지하고 싶을 때 사용함 */
+  animation-delay: 2s;
+  /* animation-delay : animation을 바로 실행하지 않고 일정 시간 이후 실행하도록 함 */
+}
