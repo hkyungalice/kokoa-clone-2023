@@ -4,11 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chats - Kokoa Clone</title>
+  <title>Chat - Kokoa Clone</title>
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
+<body id='chat-screen'>
   <!-- components -->
   <div class="status-bar">
     <div class="status-bar__column">
@@ -27,45 +27,48 @@
   </div>
 
   <!-- components -->
-  <header class='screen-header'>
-    <h1 class="screen-header__title">Chats</h1>
-    <div class="screen-header__icons">
+  <header class='alt-header'>
+    <div class="alt-header__column">
+      <a href="chats.html">
+        <i class="fas fa-angle-left fa-3x"></i>
+      </a>
+    </div>
+    <div class="alt-header__column">
+      <h1 class="alt-header__title">니꼬</h1>
+    </div>
+    <div class="alt-header__column">
       <span>
         <i class="fas fa-search fa-lg"></i>
       </span>
       <span>
-        <i class="far fa-comment-dots fa-lg"></i>
-      </span>
-      <span>
-        <i class="fas fa-music fa-lg"></i>
-      </span>
-      <span>
-        <a href="settings.html">
-          <span class="badge-sm"></span>
-          <i class="fas fa-cog fa-lg"></i>
-        </a>
+        <i class="fas fa-bars fa-lg"></i>
       </span>
     </div>
   </header>
 
-  <main class='main-screen'>
-    <a href="chat.html">
-      <!-- components -->
-      <div class="user-component">
-        <div class="user-component__column">
-          <img src="https://i.pinimg.com/564x/aa/53/07/aa53077332c7edee9197913a78ae8767.jpg"
-            class='user-component__avatar user-component__avatar' />
-          <div class="user-component__text">
-            <h4 class="user-component__title">KakaoTalk</h4>
-            <h6 class="user-component__subtitle">Please check My Kokoa Account Info</h6>
-          </div>
-        </div>
-        <div class="user-component__column">
-          <span class='user-component__time'>21:22</span>
-          <span class="badge">1</span>
+  <main class='main-screen main-chat'>
+    <div class="chats__timestamp">
+      Tuesday, June 30, 2020
+    </div>
+
+    <div class="message-row">
+      <img src="https://img.siksinhot.com/article/1617170495644923.jpg" alt="이미지">
+      <div class="message-row__content">
+        <span class="message__author">니꼬</span>
+        <div class="message__info">
+          <span class="message__bubble">Hi!</span>
+          <span class="message__time">21:27</span>
         </div>
       </div>
-    </a>
+    </div>
+    <div class="message-row message-row--own">
+      <div class="message-row__content">
+        <div class="message__info">
+          <span class="message__bubble">Hi! Nice to meet you!</span>
+          <span class="message__time">21:27</span>
+        </div>
+      </div>
+    </div>
   </main>
 
   <!-- components -->
@@ -79,7 +82,7 @@
       <li class="nav__btn">
         <a href="chats.html" class="nav__link">
           <span class="nav__notification badge">1</span>
-          <i class="fas fa-comment fa-2x"></i>
+          <i class="far fa-comment fa-2x"></i>
 
         </a>
       </li>
