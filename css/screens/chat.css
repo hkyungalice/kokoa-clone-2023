@@ -1,5 +1,5 @@
 #chat-screen {
-  height: 1100vh;
+  height: 500vh;
   background-color: #abc1d1;
 }
 
@@ -21,6 +21,18 @@
   z-index: 1;
 }
 
+/* animation - fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .main-chat {
   display: flex;
   flex-direction: column;
@@ -35,12 +47,30 @@
   font-size: 14px;
   border-radius: 25px;
   background-color: #92a3b2;
+  animation: fadeIn 0.8s linear;
+}
+
+/* 숙제! animation
+  1) 상대방의 bubble : fade-in from left
+  2) 내 bubble : fade-in from right
+*/
+@keyframes yourBubble {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .message-row {
   display: flex;
   width: 100%;
   margin-bottom: 25px;
+  animation: yourBubble 0.3s linear;
+  animation-delay: 0.8s;
 }
 
 .message-row img {
@@ -75,8 +105,24 @@
   opacity: 0.8;
 }
 
+/* 숙제! animation
+  1) 상대방의 bubble : fade-in from left
+  2) 내 bubble : fade-in from right
+*/
+@keyframes myBubble {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
 .message-row--own {
   justify-content: flex-end;
+  animation: myBubble 0.3s linear;
+  animation-delay: 1s;
 }
 
 .message-row--own .message__info {
@@ -101,6 +147,7 @@
   width: 100%;
   padding: 5px 25px;
   background-color: #fff;
+  transition: transform 0.3s ease-in-out; /* 이 코드 없으면 input:focus에서 벗어났을 때 input이 위에서 강림함 */
 }
 
 .reply i:not(button i) {
@@ -121,6 +168,7 @@
   padding: 12px;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -147,4 +195,26 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile-wink,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-wink,
+.reply:focus-within button {
+  opacity: 0;
+  /* ○○○:focus-within : ○○○ 내부에 어떤 element가 focus 되어 있다면 */
+}
+
+.reply input:focus {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
