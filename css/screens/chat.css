@@ -90,3 +90,61 @@
   border-top-right-radius: 0;
   background-color: var(--yellow);
 }
+
+.reply {
+  position: fixed;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px 25px;
+  background-color: #fff;
+}
+
+.reply i:not(button i) {
+  opacity: 0.5;
+}
+
+.reply .reply__column:first-child {
+  width: 10%;
+}
+
+.reply .reply__column:last-child {
+  position: relative;
+  width: 90%;
+}
+
+.reply input {
+  width: 100%;
+  padding: 12px;
+  border: var(--main-border);
+  border-radius: 20px;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+}
+
+.reply__column:last-child > i {
+  top: 12px;
+  right: 50px;
+}
+
+.reply__column button {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--yellow);
+}
+
+.reply__column button:focus,
+.reply__column button:active {
+  outline: none;
+}
