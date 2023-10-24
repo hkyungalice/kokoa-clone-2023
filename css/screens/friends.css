@@ -30,7 +30,7 @@
   color: var(--gray-5);
 }
 
-/* splash */
+/* animation - splash */
 @keyframes hideSplashScreen {
   from {
     opacity: 1;
