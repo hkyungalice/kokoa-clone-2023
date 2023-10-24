@@ -101,3 +101,23 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+/* animation - icon hover effect */
+@keyframes heartBeat {
+  0% {
+    color: #fff;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.5);
+  }
+  100% {
+    color: #fff;
+  }
+}
+.open-post__heart-count:hover i {
+  will-change: transform;
+  /* will-change : animation을 사용할 때 브라우저에게 미리 사용 예고장을 던져줘서 버벅거림을 줄여줄 수 있음 - 그래픽 카드를 사용해서 애니메이션을 과속화 시켜줌 */
+  animation: heartBeat 1s linear infinite;
+}
