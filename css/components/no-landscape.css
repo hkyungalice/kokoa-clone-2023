@@ -1,0 +1,19 @@
+#no-landscape {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  #no-landscape {
+    position: absolute;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    font-size: 32px;
+    background-color: blanchedalmond;
+    z-index: 200;
+  }
+}
